@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<link rel="stylesheet" media="screen" href="static/css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.teamname.label }}<br>
+        {{ form.teamname(cols=40, rows=1) }}<br>
+
+        {{ form.output.label }}<br>
+        {{ form.output(cols=40, rows=8) }}<br>
+        
+        {% for message in messages %}
+        <span style="color: green;">[{{ message }}]</span>
+        {% endfor %}
+        
+        {% for error in errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+        
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

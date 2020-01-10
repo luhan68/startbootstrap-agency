@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="The UCSB Department of Statistics & Applied Probability and the Center for Financial Mathematics and Actuarial Research are partnering with Hull Tactical to run a data science contest on predicting the S&P 500 returns. Undergraduate and Masters students may participate in teams of up to 4 members, to compete for total prizes of $7000 in two categories: (i) Best Prediction and (ii) Most Creative. The prizes up for grab include $2500 for the winner and $1000 for the runner-up in each catergory.">
+  <meta name="author" content="Lu Han">
+
+  <title>Home | ERP Contest</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="/static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <!-- Navigation -->
+ <!--  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('home') }}">Hull Tactical ERP Prediction Contest</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+                <style type="text/css">
+              #mainNav .navbar-nav > li.nav-item > a {
+                font-size: 20px;
+                color: yellow;
+                font-weight: 700;
+                letter-spacing: 0px;
+              }
+                </style>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('rules') }}">Rules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('data') }}">Data</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ -->
+  <!-- Page Header -->
+
+<style type="text/css">
+  header.masthead {
+  margin-bottom: 0px;}
+
+
+</style>
+  <header class="masthead" style="background-image: url('/static/ucsb_images/stock2_1.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <style type="text/css">
+              h1{
+                font-weight: 650;
+                font-family: "FaktPro", "Open Sans", "helvetica", "sans-serif";
+              }
+            </style>
+            <h1>2ND ERP PREDICTION CONTEST</h1>
+            <!-- <span class="subheading">2nd Annual ERP contest details coming soon ...</span> -->
+            <hr>
+            <a class="btn btn-primary btn-xl" href="https://ucsb-erp-contest.herokuapp.com/">More about 1ST ERP Contest</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<style type="text/css">
+  .features-icons {
+  padding-top: 4.00rem;
+  padding-bottom: 3.50rem;
+  margin-bottom:40px;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+.features-icons .container{
+
+}
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 5.5rem;
+}
+
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 6rem
+}
+
+a:link {
+  text-decoration: none;
+  color:black;
+}
+
+</style>
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <!-- <a href="{{ url_for('rules') }}" class="not-active"> -->
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-book-open m-auto text-primary"></i>
+            </div>
+            <h3>Rules</h3>
+<!--             <p class="lead mb-0">Two categories you can attend!</p> -->
+          </div>
+          </a>
+        </div>
+        <div class="col-lg-4">
+          <!-- <a href="{{ url_for('data') }}" class="not-active"> -->
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-chart m-auto text-primary"></i>
+            </div>
+            <h3>Data</h3>
+  <!--           <p class="lead mb-0">Get your hands dirty and write some code!</p> -->
+          </div>
+        </a>
+        </div>
+        <div class="col-lg-4">
+          <!-- <a href="{{ url_for('leaderboard') }}" class="not-active"> -->
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-like m-auto text-primary"></i>
+            </div>
+            <h3>Leaderboard</h3>
+<!--             <p class="lead mb-0">Ranking of the teams started from April 8th!</p> -->
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <font size="3">
+        The Department of Statistics &amp; Applied Probability and the
+        Center for Financial Mathematics and Actuarial Research are
+        partnering with <a href="http://hulltactical.com">Hull
+        Tactical</a> to run a data science contest on predicting the
+        S&amp;P 500 returns. Undergraduate and Masters students may
+        participate in teams of up to 4 members, to compete for 
+        the cash prizes.
+        </font>
+        <br>
+        <br>
+        <br>
+
+        <iframe style="display: block; margin: auto; padding-bottom: 10px" width="560" height="315" src="https://www.youtube.com/embed/kZqJlxuT89o" frameborder="0" allowfullscreen></iframe>
+        <font size="3" color=#718792>
+
+        <div style="padding-bottom: 15px">
+          <center>Lecture given by Blair Hull, founder and chairman of Hull Tactical on February 21, 2019</center>
+        </div>
+        </font>
+        <br>
+        <hr>
+        <br>
+        <font size="4" color=#718792>
+        <b> ANNOUNCEMENTS&nbsp&nbsp&nbsp&nbsp</b>
+       
+        <br>
+        <br>
+      </font>
+        <font size="3">
+        <!-- <ul> -->
+        <!-- <li> -->
+        To receive ERP contest related email announcements please 
+        join our 
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScEOB7WK8RUp9HQywPLDQtjYpf1cvxnNZ6w3Fa9Z5kb-pOgdw/viewform"><font color = #0000EE>mailing list</font></a>.
+        <!-- </li> -->
+          <br>
+          <br>
+                 <a href="https://twitter.com/ContestErp?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false" align="center">Follow @ContestErp</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <!-- </ul> -->
+        </font>
+        <hr>
+        <br>
+        <!-- <font color=#718792 size="4"> -->
+        <!-- <b> TIMELINE </b>
+        </font>
+        <br>
+        <br>
+        <font size="3">
+        <ul>
+        <li><a href="http://en.wikipedia.org/wiki/Blair_Hull"><font color = #0000EE>Blair Hull</font></a>,
+          founder and chairman of Hull Tactical, gave a special 
+          lecture on Thursday February 21 at 5:00pm in Buchanan 1920.
+          Here is the original <a href="/static/ucsb_images/hull-flyer.pdf"><font color = #0000EE>flyer</font></a>.
+
+        </li>
+
+          <li>Team registration opens February 15th.</li>
+          <li>
+            Hull Tactical held their first conference call to discuss indicators and modelling techniques on March 6th at 2:00pm. Dial-in Number: (605) 475-3235, Access Code: 522939#.
+          </li>
+          <li>The first submission deadline for the Best Prediction
+          category is April 8th.</li> 
+
+          <li> The live portion of the prediction contest begins
+          April 8th and ends May 8th.</li>
+          <li>Submissions for the Most Creative category are
+          due on May 8th.</li>
+          <li>The contest ends May 8th with winners announced soon 
+          after.</li>
+          <li>Winning teams present their work 
+          and are awarded prizes on May 16th.</li>
+        </ul>
+        </font>
+        <hr>
+        <br>
+        <font size="4" color=#718792>
+        <b> REGISTRATION </b>
+        </font>
+        <br>
+        <br>
+        <font size="3">
+        Register your team  <a href="https://goo.gl/forms/hE8Nwm6zRWkz8Fil2"><b><font color=#0000EE>here</font></a></b>
+        or search for like-minded teammates <a href="https://goo.gl/forms/N6NzZmKIcjYUxihv1"><b><font color=#0000EE>here</font></a></b>.
+        Here is the <a href="https://goo.gl/BwG2wy"><b><font color=#0000EE>list of everyone</font></a></b>
+        who searched for a team. Registration ends on <b>April 1st</b>. You are allowed to 
+        register a team of up to 4 students (currently enrolled
+        at UCSB). At most one Master's student can participate
+        per team and no PhD students are allowed entry.
+        </font>
+        <hr>
+        <br>
+        <font size="4" color=#718792>
+        <b> OFFICE HOURS </b>
+        </font>
+        <br>
+        <br>
+        <font size="3">
+        Our PSTAT PhD candidate Aditya Maheshwari will be available
+        during office hours to provide help with your progress in either
+        of the contest categories. Aditya's office hours will be
+        held every Monday at 2:00-3:00pm in SH 5607F.
+        You can also email all questions to 
+        <a href="mailto:erpcontest@gmail.com" target="_top">erpcontest@gmail.com</a>.
+        </font>
+
+        <hr> -->
+        <br>
+        <font size="4" color=#718792>
+        <b> CONTACT </b>
+        </font>
+
+        <br>
+        <br>
+        <font size="3">
+        For contest related inquiries you may email <a href="mailto:erpcontest@gmail.com" target="_top">erpcontest@gmail.com</a>.
+        Please do <b>NOT</b> email the PSTAT staff or faculty with any contest related questions.
+        
+        </font>
+
+        <br>
+        <br>
+
+        <hr>
+        <!-- Pager -->
+        <div class="clearfix">
+          <style type="text/css">
+          .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+            background-color: #0066ff !important;
+          }
+          </style>
+          <a class="btn btn-primary float-right" href="{{ url_for('home') }}">Back to Top &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+<!--     <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/ContestErp">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul> -->
+<!--           <br> -->
+
+          <a href="http://www.ucsb.edu/" onclick="target='_blank'">
+         <img src="/static/ucsb_images/ucsb_logo.png" width="120" alt="UCSB circle logo" style="display: block; margin: 0 auto; margin-top: 20">
+          </a>  
+          <br>
+          <a href="http://www.hulltactical.com/" onclick="target='_blank'">
+          <img src="/static/ucsb_images/logo_hull.png" width="120" alt="Hull tactical logo" style="display: block; margin: 0 auto; margin-top: 20">  
+        </a>
+          <p class="copyright text-muted">Copyright &copy; UCSB Department of Statistics 2020</p>
+        
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/static/js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

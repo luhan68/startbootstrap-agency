@@ -1,0 +1,86 @@
+<html lang="en" class="gr__pstat_ucsb_edu"><head>
+  <title>Home | ERP Contest</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <?link rel="stylesheet" href="./css/erpcontest.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="container">
+
+  <!-- Header -->
+   <div class="row vertical-align">
+   <div class="col-sm-0">
+   </div>
+   <div class="col-sm-9 page-header">
+     <h2>
+       Hull Tactical ERP Prediction Contest
+       <br>
+       <small>February 15, 2019 - May 15, 2019</small>     
+     </h2>
+   </div>
+   <div class="col-sm-1">
+     <!-- Empty -->
+   </div>
+ </div>
+</div>
+
+
+
+
+
+
+{% extends 'bootstrap/base.html' %}
+{% block title %}
+{% if title %}{{ title }} - Welcome to Full Tactical ERP Contest{% else %}Welcome to Full Tactical ERP Contest{% endif %}
+{% endblock %}
+{% block navbar %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/nav_bar.css') }}">
+
+<ul class="nav nav-tabs nav-justified">
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <style type="text/css">
+                    #nav{
+                    font-size: 18;
+                }
+                </style>
+                <li><a id="nav" href="{{ url_for('home') }}">{{ ('Home') }}</a></li>
+                <li><a id="nav" href="{{ url_for('rules') }}">{{ ('Rules') }}</a></li>
+                <li><a id="nav" href="{{ url_for('data') }}">{{ ('Data') }}</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</nav>
+<?/ul>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+</div>
+{% endblock %}
+

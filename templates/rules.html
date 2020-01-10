@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Rules | ERP Contest</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('home') }}">Hull Tactical ERP Prediction Contest</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+                <style type="text/css">
+              #mainNav .navbar-nav > li.nav-item > a {
+                font-size: 20px;
+                font-weight: 800;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+              }
+                </style>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('rules') }}">Rules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('data') }}">Data</a>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('leaderboard') }}">Leaderboard</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('/static/img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>RULES</h1>
+            <span class="subheading">Two Categories: Best Prediction & Most Creative</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <font size="4">
+        <b>The rules for the <i>Best Prediction</i> category are as 
+        follows.</b>
+        </font>
+        <br>
+        <br>
+
+        <font size="3">
+        <ul>
+        <li>
+        The target variable for the prediction problem is "ASPFWR5" 
+        as provided in the Hull Tactical data set.
+        This is the 5 (trading) day forward ERP of the S&amp;P 500 adjusted 
+        for dividends. 
+        </li>
+        <li>
+        This category of the contest will have two
+        evaluation phases. Phase I will involve an out-of-sample test
+        and Phase II will involve a real-time prediction scenario.
+        </li>
+        <li>
+        Phase I of the contest will be judged on the best R-square 
+        measure of your prediction algorithm based on some period in 
+        2018 (as a result the data set you are given does not include 
+        2018). This will take place on April 8th. 
+        </li>
+        <li>
+        Phase II involves a live
+        contest that will run from April 8th to May 8th. It will
+        evaluate your prediction algorithms on real time S&amp;P 500 returns
+        and will include a live leaderboard. These live scores will 
+        again be based on R-squared performance.
+        </li>
+        <li>
+        The winner of the Best Prediction category will be based on 
+        the average of the final R-square scores from the two phases.
+        </li>
+        <li> You will be able to update your code during the live
+        portion of the contest. Using additional data sources is 
+        also allowed provided you source them programmatically. 
+        You final implementation will be
+        made public under a free software license. 
+        </li>
+        </ul>
+        </font>
+        <hr>
+
+        <br>
+        <font size='4'>
+        <b>The rules for the <i>Most Creative</i> category are as 
+        follows.</b>
+        </font>
+        <br>
+        <br>
+        <font size='3'>
+        <ul>
+        <li>
+        The <i>Most Creative</i> category will expand the judgement
+        criteria to topics other than just prediction. This could be
+        an explanation of some market phenomena, a novel trading
+        strategy or an insightful analysis. 
+        </li>
+        <li>
+          Some example entries include interesting visualization
+        (graphs, animations, etc), discovering new nonlinear
+        relationships in the data, proposing new data transformations,
+        testing a new variable for predictive power, 
+        explaining a market anomaly pertaining to stock returns, etc.
+        </li>
+        <li>
+        The submitted entries in the
+        form of a typewritten report will be judged by a panel of
+        experts consisting of UCSB faculty and Hull Tactical 
+        professionals. 
+        </li>
+        </ul>
+        <br> 
+        <i>
+        A team is allowed to participate in one or both of
+        the contest categories.  You are encouraged to participate in
+        both. The winners of both categories will deliver
+        a presentation to explain their ideas on May 16h. 
+        <i> 
+        <br>
+        <br>
+        </font>
+        <font size='4'>
+        <b>
+        See more detailed description of the rules: <br>
+        - <a href="/static/rules_creative_category1.pdf"><font color = #0000EE>Creative Category</font></a>
+        <br>- <a href="/static/rules_prediction_phase.pdf"><font color = #0000EE>Prediction Phase</font></a>
+        </b>
+        </font>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <hr>
+
+
+  <!-- Footer -->
+  <footer>
+            <a href="http://www.ucsb.edu/" onclick="target='_blank'">
+         <img src="/static/ucsb_images/ucsb_logo.png" width="120" alt="UCSB circle logo" style="display: block; margin: 0 auto; margin-top: 20">
+          </a>  
+          <br>
+          <a href="http://www.hulltactical.com/" onclick="target='_blank'">
+          <img src="/static/ucsb_images/logo_hull.png" width="120" alt="Hull tactical logo" style="display: block; margin: 0 auto; margin-top: 20">  
+        </a>
+          <p class="copyright text-muted">Copyright &copy; UCSB Department of Statistics 2019</p>
+        
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/static/js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

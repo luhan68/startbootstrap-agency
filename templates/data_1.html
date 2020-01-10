@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div id="content" class="row">
+
+    <div class="col-sm-2 sidebar">
+    </div>
+
+    <div class="col-sm-9">
+<br>
+
+<font size="2">
+The ERP contest is about prediction of the stock market. The
+objective is to build a predictive model for weekly S&amp;P 500
+returns. For this purpose Hull Tactical is providing you with 
+this <a href="/static/dataset.csv">data set</a>
+of variables that may aid this task. 
+There are numerous ways to build a prediction model, ranging from a
+simple linear regression to more sophisticated methods from
+machine learning. The research team at Hull Tactical has
+described some of their experiences with S&amp;P 500 prediction in the
+following articles:
+<br>
+<br>
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3050254">Return Predictability and Market-Timing: A One-Month Model</a> 
+<br>
+
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3165669">Seasonal Effects and Other Anomalies</a> 
+<br>
+
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2609814">A Practitioner's Defense of Return Predictability</a> 
+<br>
+<br>
+
+The data file above contains various financial variables over a
+span of 1952-2017. A brief description of each of these variables may be
+found <a href="variables.pdf">here</a>. To get started on building an intuition as to why
+these may hold predictive power, you may look at the
+<a href="https://en.wikipedia.org/wiki/Baltic_Dry_Index">Baltic
+Dry Index</a> (BDIY), the
+<a href="https://en.wikipedia.org/wiki/VIX">Volatility Index</a> (VIX),
+<a href="https://en.wikipedia.org/wiki/Calendar_effect">calendar
+effect</a> (SIM, TOM) and 
+<a href="http://hulbertratings.com/stock-sentiment">sentiment
+index</a> (Hulbert).
+You can find all of these variables in the description files
+linked above.
+
+</font>
+
+<br>
+<br>
+
+<i> Please do not use the Hull Tactical data set for any purpose
+other than the ERP contest.</i>
+
+</div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+   <div class="col-sm-2">
+     <!-- Empty -->
+   </div>
+
+      <a href="http://www.ucsb.edu/" onclick="target='_blank'">
+         <img src="/static/images/ucsb_logo.png" width="120" alt="UCSB circle logo" style="display: block; margin: 0 auto; margin-top: 20">
+      </a>  
+      <br>
+      <br>
+      <img src="/static/images/logo_hull.png" width="120" alt="Hull tactical logo" style="display: block; margin: 0 auto; margin-top: 20">  
+   </div>
+   <div class="col-sm-1">
+     <!-- Empty -->
+   </div>
+ </div>
+ 
+<br>
+<br>
+<br>
+
+ <!-- Footer -->
+  <div class="row">
+
+
+     <!-- Actual footer here -->
+     <p id="footer">
+        <style type="text/css">
+            #footer{
+                text-align: center;
+            }
+        </style>
+       <a href="http://www.pstat.ucsb.edu" onclick="target='_blank'">Statistics and Applied Probability</a>
+       <br>
+       University of California
+       <br>
+       Santa Barbara, California 93106-3110
+     </p>
+   </div>
+   <div class="col-sm-1">
+     <!-- Empty -->
+   </div>   
+ </div> 
+</div>
+
+
+{% endblock %}

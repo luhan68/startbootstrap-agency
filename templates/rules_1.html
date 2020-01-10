@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="content" class="row">
+
+    <div class="col-sm-2 sidebar">
+    </div>
+
+    <div class="col-sm-9">
+<br>
+<font size="3">
+<b>The rules for the <i>Best Prediction</i> category are as 
+follows.</b>
+</font>
+<br>
+<br>
+
+<font size="2">
+<ul>
+<li>
+The target variable for the prediction problem is "ASPFWR5" 
+as provided in the Hull Tactical data set.
+This is the 5 (trading) day forward ERP of the S&amp;P 500 adjusted 
+for dividends. 
+</li>
+<li>
+This category of the contest will have two
+evaluation phases. Phase I will involve an out-of-sample test
+and Phase II will involve a real-time prediction scenario.
+</li>
+<li>
+Phase I of the contest will be judged on the best R-square 
+measure of your prediction algorithm based on some period in 
+2018 (as a result the data set you are given does not include 
+2018). This will take place on April 8th. 
+</li>
+<li>
+Phase II involves a live
+contest that will run from April 8th to May 8th. It will
+evaluate your prediction algorithms on real time S&amp;P 500 returns
+and will include a live leaderboard. These live scores will 
+again be based on R-squared performance.
+</li>
+<li>
+The winner of the Best Prediction category will be based on 
+the average of the final R-square scores from the two phases.
+</li>
+<li> You will be able to update your code during the live
+portion of the contest. Using additional data sources is 
+also allowed provided you source them programmatically. 
+You final implementation will be
+made public under a free software license. 
+</li>
+</ul>
+</font>
+<br>
+<font size='3'>
+<b>The rules for the <i>Most Creative</i> category are as 
+follows.</b>
+</font>
+<br>
+<br>
+<font size='2'>
+<ul>
+<li>
+The <i>Most Creative</i> category will expand the judgement
+criteria to topics other than just prediction. This could be
+an explanation of some market phenomena, a novel trading
+strategy or an insightful analysis. 
+</li>
+<li>
+  Some example entries include interesting visualization
+(graphs, animations, etc), discovering new nonlinear
+relationships in the data, proposing new data transformations,
+testing a new variable for predictive power, 
+explaining a market anomaly pertaining to stock returns, etc.
+</li>
+<li>
+The submitted entries in the
+form of a typewritten report will be judged by a panel of
+experts consisting of UCSB faculty and Hull Tactical 
+professionals. 
+</li>
+</ul>
+<br> 
+<i>
+A team is allowed to participate in one or both of
+the contest categories.  You are encouraged to participate in
+both. The winners of both categories will deliver
+a presentation to explain their ideas on May 16h. 
+<i> 
+</font>
+
+</div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+   <div class="col-sm-2">
+     <!-- Empty -->
+   </div>
+
+      <a href="http://www.ucsb.edu/" onclick="target='_blank'">
+         <img src="/static/images/ucsb_logo.png" width="120" alt="UCSB circle logo" style="display: block; margin: 0 auto; margin-top: 20">
+      </a>  
+      <br>
+      <br>
+      <img src="/static/images/logo_hull.png" width="120" alt="Hull tactical logo" style="display: block; margin: 0 auto; margin-top: 20">  
+   </div>
+   <div class="col-sm-1">
+     <!-- Empty -->
+   </div>
+ </div>
+ 
+<br>
+<br>
+<br>
+
+ <!-- Footer -->
+  <div class="row">
+
+
+     <!-- Actual footer here -->
+     <p id="footer">
+        <style type="text/css">
+            #footer{
+                text-align: center;
+            }
+        </style>
+       <a href="http://www.pstat.ucsb.edu" onclick="target='_blank'">Statistics and Applied Probability</a>
+       <br>
+       University of California
+       <br>
+       Santa Barbara, California 93106-3110
+     </p>
+   </div>
+   <div class="col-sm-1">
+     <!-- Empty -->
+   </div>   
+ </div> 
+</div>
+
+
+{% endblock %}

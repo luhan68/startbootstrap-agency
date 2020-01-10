@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Data | ERP Contest</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('home') }}">Hull Tactical ERP Prediction Contest</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+                <style type="text/css">
+              #mainNav .navbar-nav > li.nav-item > a {
+                font-size: 20px;
+                font-weight: 800;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+              }
+                </style>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('rules') }}">Rules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('data') }}">Data</a>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('leaderboard') }}">Leaderboard</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('/static/ucsb_images/stock6.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>DATA</h1>
+            <span class="subheading">Get your hands dirty and write some code!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <font color=#718792 size="4">
+        <b> DATASET </b>
+        </font>
+        <br>
+        <br>
+        <font size="3">
+        The ERP contest is about prediction of the stock market. The
+        objective is to build a predictive model for weekly S&amp;P 500
+        returns. 
+        <br>
+        <br>
+        For this purpose Hull Tactical is providing you with 
+        this <a href="/static/dataset.csv"> <font size="4" color=#0000EE><b>data set</b></font></a>
+        of variables that may aid this task. 
+        There are numerous ways to build a prediction model, ranging from a
+        simple linear regression to more sophisticated methods from
+        machine learning. 
+ 
+        <br>
+        <br>
+        An updated dataset containing daily data for 2018 and 2019 is available <b><a href="/static/dataset_18_19.csv"><font color = #0000EE>here</font></a></b>. It could be used for updating models.
+        <br>
+        <br>
+
+        The research team at Hull Tactical has
+        described some of their experiences with S&amp;P 500 prediction in the
+        following articles:
+        <br>
+        <br>
+        <li>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3050254"><font color = #0000EE>Return Predictability and Market-Timing: A One-Month Model</font></a>
+      </li>
+      <li>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3165669"><font color = #0000EE>Seasonal Effects and Other Anomalies</font></a> 
+        </li>
+        <li>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2609814"><font color = #0000EE>A Practitioner's Defense of Return Predictability</font></a>
+      </li>
+        <br>
+
+        The data file above contains various financial variables over a
+        span of 1952-2017. A brief description of each of these variables may be
+        found <a href="/static/variables.pdf"><font color = #0000EE>here</font></a>. To get started on building an intuition as to why
+        these may hold predictive power, you may look at the
+        <a href="https://en.wikipedia.org/wiki/Baltic_Dry_Index"><font color = #0000EE>Baltic
+        Dry Index</font></a> (BDIY), the
+        <a href="https://en.wikipedia.org/wiki/VIX"><font color = #0000EE>Volatility Index</font></a> (VIX),
+        <a href="https://en.wikipedia.org/wiki/Calendar_effect"><font color = #0000EE>calendar
+        effect</font></a> (SIM, TOM) and 
+        <a href="http://hulbertratings.com/stock-sentiment"><font color = #0000EE>sentiment
+        index</font></a> (Hulbert).
+        You can find all of these variables in the description files
+        linked above.
+      
+
+        <br>
+        <br>
+              An additional dataset with minute frequency is <a href="https://drive.google.com/open?id=1W_4YQCvUxtNg_Moukrhf_bWKwKY37B1e"><font color = #0000EE><b>here</b></font></a>. It can be used for most creative category or for improving the model accuracy. Note that we will test the submitted entries for the "Best Prediction" using data only at daily frequency.
+        <br>
+        <br>
+
+
+
+        </font>
+        <i><font size="4"> ** Please do not use the Hull Tactical data set for any purpose other than the ERP contest.</font></i>
+        <hr>
+        <br>
+        <font color=#718792 size="4">
+        <b> BENCHMARK </b>
+        </font>
+        <br>
+        <br>
+        <font size="3">
+        A script containing linear prediction model of ERP along with evaluation metric for Phase I is available <b><a href="/static/example_code_v1.R"><font color = #0000EE>here</font></a></b>.
+        <br>
+        <br>
+        <div style="height:400px;width:700px;overflow:auto;">
+        <img src="/static/ucsb_images/example_code_v1.jpg" alt="example_R_code">
+        </div>
+        <br>
+        Below is an illustration for the realized and predicted ERP using the linear model on a test data set.
+
+        <img src="/static/perdicted_example.png" width="650" alt="perdiction example" style="display: block; margin-right: 10 auto;"> 
+         <br>
+         It is not a surprise for this model to produce poor predictions due to linear assumption. <br>We encourage you to explore different statistical methods to improve prediction accuracy.
+       </font>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+            <a href="http://www.ucsb.edu/" onclick="target='_blank'">
+         <img src="/static/ucsb_images/ucsb_logo.png" width="120" alt="UCSB circle logo" style="display: block; margin: 0 auto; margin-top: 20">
+          </a>  
+          <br>
+          <a href="http://www.hulltactical.com/" onclick="target='_blank'">
+          <img src="/static/ucsb_images/logo_hull.png" width="120" alt="Hull tactical logo" style="display: block; margin: 0 auto; margin-top: 20"> 
+        </a>
+          <p class="copyright text-muted">Copyright &copy; UCSB Department of Statistics 2019</p>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/static/js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
