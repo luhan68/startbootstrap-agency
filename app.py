@@ -24,7 +24,7 @@ def evaluate(output):
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template('index.html')
+    return render_template('home.html')
 
 
 @app.route('/rules', methods=['GET', 'POST'])
